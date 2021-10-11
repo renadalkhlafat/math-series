@@ -23,3 +23,8 @@ def test_fabonacci_1():
     expected = 1
     actual = fibonacci(1)
     assert expected == actual
+
+def test_fabonacci_9():
+    expected = 34
+    actual = fibonacci(9)
+    assert expected == actual
