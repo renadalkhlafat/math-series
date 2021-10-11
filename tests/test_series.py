@@ -33,3 +33,25 @@ def test_fabonacci_negative():
     expected = "The value must be positive"
     actual = fibonacci(-1)
     assert expected == actual
+
+def test_fabonacci_string():
+    expected = "The value must be intager"
+    actual = fibonacci('4')
+    assert expected == actual
+
+
+"""
+*Lucas
+===========
+test cases: 
+    -1 => "The value must be positive"
+    "4" => "The value must be intager"
+    0 => 2
+    1 => 1
+    6 => 18  
+"""
+
+def test_lucas_0():
+    expected = 2
+    actual = lucas(0)
+    assert expected == actual
