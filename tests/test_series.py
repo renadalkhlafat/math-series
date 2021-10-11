@@ -15,7 +15,11 @@ test cases:
     9 => 34   
 """
 def test_fabonacci_0():
-    expected =0
-    actual=fibonacci(0)
-    assert expected==actual
+    expected = 0
+    actual = fibonacci(0)
+    assert expected == actual
 
+def test_fabonacci_1():
+    expected = 1
+    actual = fibonacci(1)
+    assert expected == actual
