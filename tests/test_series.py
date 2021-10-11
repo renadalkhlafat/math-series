@@ -75,3 +75,18 @@ def test_lucas_string():
     expected = "The value must be intager"
     actual = lucas('4')
     assert expected == actual
+
+"""
+*sum_series
+===========
+test cases: 
+    -1,3,2 => "The value must be positive"
+    "4",5,9 => "The value must be intager"
+    5 => 5
+    0 => 0
+    6 => 8  
+"""
+def test_sum_series_string():
+    expected = "The value must be intager"
+    actual = sum_series('4',5,3)
+    assert expected == actual
