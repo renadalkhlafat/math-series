@@ -96,3 +96,7 @@ def test_sum_series_negative():
     actual = sum_series(-1,3,2)
     assert expected == actual
 
+def test_sum_series_one_arg():
+    expected = 5
+    actual = sum_series(5)
+    assert expected == actual
