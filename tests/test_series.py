@@ -70,3 +70,8 @@ def test_lucas_negative():
     expected = "The value must be positive"
     actual = lucas(-1)
     assert expected == actual
+
+def test_lucas_string():
+    expected = "The value must be intager"
+    actual = lucas('4')
+    assert expected == actual
