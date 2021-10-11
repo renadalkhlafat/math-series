@@ -8,8 +8,8 @@ def test_version():
 *Fabonacci
 ===========
 test cases: 
-    -1 => "Input is not valid
-    "4" => "Input is not valid
+    -1 => "The value must be positive"
+    "4" => "The value must be intager"
     0 => 0
     1 => 1
     9 => 34   
@@ -27,4 +27,9 @@ def test_fabonacci_1():
 def test_fabonacci_9():
     expected = 34
     actual = fibonacci(9)
+    assert expected == actual
+
+def test_fabonacci_negative():
+    expected = "The value must be positive"
+    actual = fibonacci(-1)
     assert expected == actual
