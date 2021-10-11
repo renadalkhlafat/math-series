@@ -65,3 +65,8 @@ def test_lucas_6():
     expected = 18
     actual = lucas(6)
     assert expected == actual
+
+def test_lucas_negative():
+    expected = "The value must be positive"
+    actual = lucas(-1)
+    assert expected == actual
