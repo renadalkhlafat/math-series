@@ -83,15 +83,14 @@ test cases:
     -1,3,2 => "The value must be positive"
     "4",5,9 => "The value must be intager"
     5 => 5
-    0 => 0
-    6 => 8  
+    6,2,8 => 74
 """
 def test_sum_series_string():
     expected = "The value must be intager"
     actual = sum_series('4',5,9)
     assert expected == actual
 
-def test_sum_series_negative():
+def test_sum_series_negative_first_arg():
     expected = "The value must be positive"
     actual = sum_series(-1,3,2)
     assert expected == actual
@@ -99,4 +98,9 @@ def test_sum_series_negative():
 def test_sum_series_one_arg():
     expected = 5
     actual = sum_series(5)
+    assert expected == actual
+
+def test_sum_series_three_arg():
+    expected = 74
+    actual = sum_series(6,2,8)
     assert expected == actual
