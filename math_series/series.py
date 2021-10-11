@@ -41,6 +41,8 @@ def sum_series(n,op1=0,op2=1):
         else:
             return sum_series(n-1,op1,op2)+sum_series(n-2,op1,op2)
 
-print(sum_series(6,-2,-8))
-
-
+# print(sum_series(6,-2,-8))
+# print(sum_series('4',5,9))
+# print(sum_series(6,2,8))
+# print(sum_series(-1,3,2))
+# print(sum_series(5))
