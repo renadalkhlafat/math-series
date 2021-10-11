@@ -88,5 +88,11 @@ test cases:
 """
 def test_sum_series_string():
     expected = "The value must be intager"
-    actual = sum_series('4',5,3)
+    actual = sum_series('4',5,9)
     assert expected == actual
+
+def test_sum_series_negative():
+    expected = "The value must be positive"
+    actual = sum_series(-1,3,2)
+    assert expected == actual
+
