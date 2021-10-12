@@ -1,0 +1,112 @@
+from math_series import __version__
+from math_series.series import *
+
+def test_version():
+    assert __version__ == '0.1.0'
+
+"""
+*Fabonacci
+===========
+test cases: 
+    -1 => "The value must be positive"
+    "4" => "The value must be intager"
+    0 => 0
+    1 => 1
+    9 => 34   
+"""
+def test_fabonacci_0():
+    expected = 0
+    actual = fibonacci(0)
+    assert expected == actual
+
+def test_fabonacci_1():
+    expected = 1
+    actual = fibonacci(1)
+    assert expected == actual
+
+def test_fabonacci_9():
+    expected = 34
+    actual = fibonacci(9)
+    assert expected == actual
+
+def test_fabonacci_negative():
+    expected = "The value must be positive"
+    actual = fibonacci(-1)
+    assert expected == actual
+
+def test_fabonacci_string():
+    expected = "The value must be intager"
+    actual = fibonacci('4')
+    assert expected == actual
+
+
+"""
+*Lucas
+===========
+test cases: 
+    -1 => "The value must be positive"
+    "4" => "The value must be intager"
+    0 => 2
+    1 => 1
+    6 => 18  
+"""
+
+def test_lucas_0():
+    expected = 2
+    actual = lucas(0)
+    assert expected == actual
+
+def test_lucas_1():
+    expected = 1
+    actual = lucas(1)
+    assert expected == actual
+
+def test_lucas_6():
+    expected = 18
+    actual = lucas(6)
+    assert expected == actual
+
+def test_lucas_negative():
+    expected = "The value must be positive"
+    actual = lucas(-1)
+    assert expected == actual
+
+def test_lucas_string():
+    expected = "The value must be intager"
+    actual = lucas('4')
+    assert expected == actual
+
+"""
+*sum_series
+===========
+test cases: 
+    -1,3,2 => "The value must be positive"
+    "4",5,9 => "The value must be intager"
+    5 => 5
+    6,2,8 => 74
+    6,-2,-8 => -74
+"""
+def test_sum_series_string():
+    expected = "The value must be intager"
+    actual = sum_series('4',5,9)
+    assert expected == actual
+
+def test_sum_series_negative_first_arg():
+    expected = "The value must be positive"
+    actual = sum_series(-1,3,2)
+    assert expected == actual
+
+def test_sum_series_negative_second_and_third_arg():
+    expected = -74
+    actual = sum_series(6,-2,-8)
+    assert expected == actual
+
+def test_sum_series_one_arg():
+    expected = 5
+    actual = sum_series(5)
+    assert expected == actual
+
+def test_sum_series_three_arg():
+    expected = 74
+    actual = sum_series(6,2,8)
+    assert expected == actual
